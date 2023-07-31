@@ -7,5 +7,13 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <a href="/new">New Message</a>
+    
+    <% messages.forEach((msg => { %>
+      <p>------------------------------</p>
+      <p>User: <%= msg.user %></p>
+      <p>Msg text: <%= msg.text %></p>
+      <p>Date: <%= msg.added.toLocaleString() %></p>
+    <% })) %>
   </body>
 </html>
